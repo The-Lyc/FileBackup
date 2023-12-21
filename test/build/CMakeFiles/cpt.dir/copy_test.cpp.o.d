@@ -198,4 +198,7 @@ CMakeFiles/cpt.dir/copy_test.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
  /usr/include/linux/close_range.h /usr/include/c++/11/cstring \
  /usr/include/string.h /usr/include/strings.h /usr/include/utime.h \
- /usr/include/x86_64-linux-gnu/sys/time.h
+ /usr/include/x86_64-linux-gnu/sys/time.h /usr/include/c++/11/fstream \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+ /usr/include/c++/11/bits/fstream.tcc
