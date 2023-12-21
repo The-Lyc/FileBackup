@@ -217,7 +217,44 @@ CMakeFiles/cpt.dir/copy_test.cpp.o: ../copy_test.cpp \
   /usr/include/c++/11/bits/refwrap.h \
   /usr/include/c++/11/ext/aligned_buffer.h \
   /usr/include/c++/11/bits/fs_dir.h \
-  /usr/include/c++/11/bits/fs_ops.h
+  /usr/include/c++/11/bits/fs_ops.h \
+  /usr/include/x86_64-linux-gnu/sys/stat.h \
+  /usr/include/x86_64-linux-gnu/bits/stat.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
+  /usr/include/x86_64-linux-gnu/bits/statx.h \
+  /usr/include/linux/stat.h \
+  /usr/include/linux/types.h \
+  /usr/include/x86_64-linux-gnu/asm/types.h \
+  /usr/include/asm-generic/types.h \
+  /usr/include/asm-generic/int-ll64.h \
+  /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
+  /usr/include/asm-generic/bitsperlong.h \
+  /usr/include/linux/posix_types.h \
+  /usr/include/linux/stddef.h \
+  /usr/include/x86_64-linux-gnu/asm/posix_types.h \
+  /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
+  /usr/include/asm-generic/posix_types.h \
+  /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
+  /usr/include/fcntl.h \
+  /usr/include/x86_64-linux-gnu/bits/fcntl.h \
+  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
+  /usr/include/linux/falloc.h \
+  /usr/include/unistd.h \
+  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+  /usr/include/x86_64-linux-gnu/bits/environments.h \
+  /usr/include/x86_64-linux-gnu/bits/confname.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+  /usr/include/linux/close_range.h \
+  /usr/include/c++/11/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/utime.h \
+  /usr/include/x86_64-linux-gnu/sys/time.h
 
 CMakeFiles/cpt.dir/home/lyc/cpp_ws/file_backup/src/copy.cpp.o: /home/lyc/cpp_ws/file_backup/src/copy.cpp \
   /usr/include/stdc-predef.h \
@@ -435,8 +472,75 @@ CMakeFiles/cpt.dir/home/lyc/cpp_ws/file_backup/src/copy.cpp.o: /home/lyc/cpp_ws/
   /usr/include/c++/11/bits/refwrap.h \
   /usr/include/c++/11/ext/aligned_buffer.h \
   /usr/include/c++/11/bits/fs_dir.h \
-  /usr/include/c++/11/bits/fs_ops.h
+  /usr/include/c++/11/bits/fs_ops.h \
+  /usr/include/x86_64-linux-gnu/sys/stat.h \
+  /usr/include/x86_64-linux-gnu/bits/stat.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
+  /usr/include/x86_64-linux-gnu/bits/statx.h \
+  /usr/include/linux/stat.h \
+  /usr/include/linux/types.h \
+  /usr/include/x86_64-linux-gnu/asm/types.h \
+  /usr/include/asm-generic/types.h \
+  /usr/include/asm-generic/int-ll64.h \
+  /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
+  /usr/include/asm-generic/bitsperlong.h \
+  /usr/include/linux/posix_types.h \
+  /usr/include/linux/stddef.h \
+  /usr/include/x86_64-linux-gnu/asm/posix_types.h \
+  /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
+  /usr/include/asm-generic/posix_types.h \
+  /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
+  /usr/include/fcntl.h \
+  /usr/include/x86_64-linux-gnu/bits/fcntl.h \
+  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
+  /usr/include/linux/falloc.h \
+  /usr/include/unistd.h \
+  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+  /usr/include/x86_64-linux-gnu/bits/environments.h \
+  /usr/include/x86_64-linux-gnu/bits/confname.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+  /usr/include/linux/close_range.h \
+  /usr/include/c++/11/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/utime.h \
+  /usr/include/x86_64-linux-gnu/sys/time.h
 
+
+/usr/include/x86_64-linux-gnu/sys/time.h:
+
+/usr/include/string.h:
+
+/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
+
+/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
+
+/usr/include/x86_64-linux-gnu/bits/environments.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h:
+
+/usr/include/fcntl.h:
+
+/usr/include/x86_64-linux-gnu/bits/statx-generic.h:
+
+/usr/include/x86_64-linux-gnu/asm/posix_types.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h:
+
+/usr/include/linux/posix_types.h:
+
+/usr/include/asm-generic/bitsperlong.h:
+
+/usr/include/linux/types.h:
+
+/usr/include/x86_64-linux-gnu/bits/statx.h:
 
 /usr/include/c++/11/bits/fs_ops.h:
 
@@ -445,6 +549,8 @@ CMakeFiles/cpt.dir/home/lyc/cpp_ws/file_backup/src/copy.cpp.o: /home/lyc/cpp_ws/
 /usr/include/c++/11/sstream:
 
 /usr/include/c++/11/bits/quoted_string.h:
+
+/usr/include/linux/falloc.h:
 
 /usr/include/c++/11/bits/uses_allocator.h:
 
@@ -456,6 +562,8 @@ CMakeFiles/cpt.dir/home/lyc/cpp_ws/file_backup/src/copy.cpp.o: /home/lyc/cpp_ws/
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h:
 
+/usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
+
 /usr/include/c++/11/bits/locale_facets_nonio.h:
 
 /usr/include/c++/11/bits/stl_relops.h:
@@ -463,6 +571,8 @@ CMakeFiles/cpt.dir/home/lyc/cpp_ws/file_backup/src/copy.cpp.o: /home/lyc/cpp_ws/
 /usr/include/c++/11/bits/parse_numbers.h:
 
 /usr/include/c++/11/limits:
+
+/usr/include/c++/11/cstring:
 
 /usr/include/c++/11/ratio:
 
@@ -482,6 +592,8 @@ CMakeFiles/cpt.dir/home/lyc/cpp_ws/file_backup/src/copy.cpp.o: /home/lyc/cpp_ws/
 
 /usr/include/c++/11/bits/streambuf_iterator.h:
 
+/usr/include/x86_64-linux-gnu/asm/types.h:
+
 /usr/include/c++/11/cwctype:
 
 /usr/include/c++/11/bits/locale_facets.h:
@@ -499,6 +611,8 @@ CMakeFiles/cpt.dir/home/lyc/cpp_ws/file_backup/src/copy.cpp.o: /home/lyc/cpp_ws/
 /usr/include/c++/11/bits/locale_classes.tcc:
 
 /usr/include/c++/11/bits/basic_string.tcc:
+
+/usr/include/utime.h:
 
 /usr/include/c++/11/bits/charconv.h:
 
@@ -555,6 +669,8 @@ CMakeFiles/cpt.dir/home/lyc/cpp_ws/file_backup/src/copy.cpp.o: /home/lyc/cpp_ws/
 /usr/include/c++/11/bits/stl_iterator_base_funcs.h:
 
 /usr/include/ctype.h:
+
+/usr/include/x86_64-linux-gnu/bits/stat.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h:
 
@@ -626,9 +742,13 @@ CMakeFiles/cpt.dir/home/lyc/cpp_ws/file_backup/src/copy.cpp.o: /home/lyc/cpp_ws/
 
 /usr/include/c++/11/ostream:
 
+/usr/include/x86_64-linux-gnu/bits/confname.h:
+
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h:
 
 /usr/include/c++/11/bits/ostream_insert.h:
+
+/usr/include/linux/close_range.h:
 
 /usr/include/c++/11/debug/assertions.h:
 
@@ -643,6 +763,10 @@ CMakeFiles/cpt.dir/home/lyc/cpp_ws/file_backup/src/copy.cpp.o: /home/lyc/cpp_ws/
 /usr/include/c++/11/ios:
 
 /usr/include/c++/11/bits/alloc_traits.h:
+
+/usr/include/x86_64-linux-gnu/asm/posix_types_64.h:
+
+/usr/include/asm-generic/types.h:
 
 /usr/include/asm-generic/errno-base.h:
 
@@ -664,6 +788,8 @@ CMakeFiles/cpt.dir/home/lyc/cpp_ws/file_backup/src/copy.cpp.o: /home/lyc/cpp_ws/
 
 /usr/include/c++/11/ext/type_traits.h:
 
+/usr/include/linux/stddef.h:
+
 /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h:
 
 /home/lyc/cpp_ws/file_backup/include/copy.h:
@@ -678,9 +804,15 @@ CMakeFiles/cpt.dir/home/lyc/cpp_ws/file_backup/src/copy.cpp.o: /home/lyc/cpp_ws/
 
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
+/usr/include/x86_64-linux-gnu/sys/stat.h:
+
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
+/usr/include/x86_64-linux-gnu/bits/fcntl.h:
+
 /usr/include/c++/11/bits/stl_function.h:
+
+/usr/include/asm-generic/posix_types.h:
 
 /usr/include/stdc-predef.h:
 
@@ -712,9 +844,13 @@ CMakeFiles/cpt.dir/home/lyc/cpp_ws/file_backup/src/copy.cpp.o: /home/lyc/cpp_ws/
 
 /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/struct_statx.h:
+
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
 /usr/include/c++/11/bits/postypes.h:
+
+/usr/include/x86_64-linux-gnu/bits/fcntl-linux.h:
 
 /usr/include/c++/11/bits/invoke.h:
 
@@ -754,6 +890,8 @@ CMakeFiles/cpt.dir/home/lyc/cpp_ws/file_backup/src/copy.cpp.o: /home/lyc/cpp_ws/
 
 /usr/include/c++/11/bits/ptr_traits.h:
 
+/usr/include/asm-generic/int-ll64.h:
+
 /usr/include/c++/11/bits/ostream.tcc:
 
 /usr/include/c++/11/clocale:
@@ -784,11 +922,15 @@ CMakeFiles/cpt.dir/home/lyc/cpp_ws/file_backup/src/copy.cpp.o: /home/lyc/cpp_ws/
 
 /usr/include/c++/11/cctype:
 
+/usr/include/unistd.h:
+
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
 /usr/include/c++/11/bits/localefwd.h:
+
+/usr/include/x86_64-linux-gnu/asm/bitsperlong.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
@@ -842,6 +984,8 @@ CMakeFiles/cpt.dir/home/lyc/cpp_ws/file_backup/src/copy.cpp.o: /home/lyc/cpp_ws/
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
+/usr/include/strings.h:
+
 /usr/include/c++/11/bits/sstream.tcc:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
@@ -852,9 +996,13 @@ CMakeFiles/cpt.dir/home/lyc/cpp_ws/file_backup/src/copy.cpp.o: /home/lyc/cpp_ws/
 
 /usr/include/x86_64-linux-gnu/bits/setjmp.h:
 
+/usr/include/linux/stat.h:
+
 /usr/include/c++/11/bits/locale_classes.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h:
+
+/usr/include/x86_64-linux-gnu/bits/struct_stat.h:
 
 /usr/include/x86_64-linux-gnu/bits/select.h:
 

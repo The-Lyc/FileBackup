@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/lyc/cpp_ws/file_backup/test/../include
+CXX_INCLUDES = -I/home/lyc/cpp_ws/file_backup/include
 
 CXX_FLAGS = 
 
