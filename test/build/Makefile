@@ -129,29 +129,29 @@ cpt/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpt.dir/build.make CMakeFiles/cpt.dir/build
 .PHONY : cpt/fast
 
-copy_test.o: copy_test.cpp.o
-.PHONY : copy_test.o
+crypto_test.o: crypto_test.cpp.o
+.PHONY : crypto_test.o
 
 # target to build an object file
-copy_test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpt.dir/build.make CMakeFiles/cpt.dir/copy_test.cpp.o
-.PHONY : copy_test.cpp.o
+crypto_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpt.dir/build.make CMakeFiles/cpt.dir/crypto_test.cpp.o
+.PHONY : crypto_test.cpp.o
 
-copy_test.i: copy_test.cpp.i
-.PHONY : copy_test.i
+crypto_test.i: crypto_test.cpp.i
+.PHONY : crypto_test.i
 
 # target to preprocess a source file
-copy_test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpt.dir/build.make CMakeFiles/cpt.dir/copy_test.cpp.i
-.PHONY : copy_test.cpp.i
+crypto_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpt.dir/build.make CMakeFiles/cpt.dir/crypto_test.cpp.i
+.PHONY : crypto_test.cpp.i
 
-copy_test.s: copy_test.cpp.s
-.PHONY : copy_test.s
+crypto_test.s: crypto_test.cpp.s
+.PHONY : crypto_test.s
 
 # target to generate assembly for a file
-copy_test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpt.dir/build.make CMakeFiles/cpt.dir/copy_test.cpp.s
-.PHONY : copy_test.cpp.s
+crypto_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpt.dir/build.make CMakeFiles/cpt.dir/crypto_test.cpp.s
+.PHONY : crypto_test.cpp.s
 
 home/lyc/cpp_ws/file_backup/src/copy.o: home/lyc/cpp_ws/file_backup/src/copy.cpp.o
 .PHONY : home/lyc/cpp_ws/file_backup/src/copy.o
@@ -177,6 +177,30 @@ home/lyc/cpp_ws/file_backup/src/copy.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpt.dir/build.make CMakeFiles/cpt.dir/home/lyc/cpp_ws/file_backup/src/copy.cpp.s
 .PHONY : home/lyc/cpp_ws/file_backup/src/copy.cpp.s
 
+home/lyc/cpp_ws/file_backup/src/crypto.o: home/lyc/cpp_ws/file_backup/src/crypto.cpp.o
+.PHONY : home/lyc/cpp_ws/file_backup/src/crypto.o
+
+# target to build an object file
+home/lyc/cpp_ws/file_backup/src/crypto.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpt.dir/build.make CMakeFiles/cpt.dir/home/lyc/cpp_ws/file_backup/src/crypto.cpp.o
+.PHONY : home/lyc/cpp_ws/file_backup/src/crypto.cpp.o
+
+home/lyc/cpp_ws/file_backup/src/crypto.i: home/lyc/cpp_ws/file_backup/src/crypto.cpp.i
+.PHONY : home/lyc/cpp_ws/file_backup/src/crypto.i
+
+# target to preprocess a source file
+home/lyc/cpp_ws/file_backup/src/crypto.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpt.dir/build.make CMakeFiles/cpt.dir/home/lyc/cpp_ws/file_backup/src/crypto.cpp.i
+.PHONY : home/lyc/cpp_ws/file_backup/src/crypto.cpp.i
+
+home/lyc/cpp_ws/file_backup/src/crypto.s: home/lyc/cpp_ws/file_backup/src/crypto.cpp.s
+.PHONY : home/lyc/cpp_ws/file_backup/src/crypto.s
+
+# target to generate assembly for a file
+home/lyc/cpp_ws/file_backup/src/crypto.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpt.dir/build.make CMakeFiles/cpt.dir/home/lyc/cpp_ws/file_backup/src/crypto.cpp.s
+.PHONY : home/lyc/cpp_ws/file_backup/src/crypto.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +210,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... cpt"
-	@echo "... copy_test.o"
-	@echo "... copy_test.i"
-	@echo "... copy_test.s"
+	@echo "... crypto_test.o"
+	@echo "... crypto_test.i"
+	@echo "... crypto_test.s"
 	@echo "... home/lyc/cpp_ws/file_backup/src/copy.o"
 	@echo "... home/lyc/cpp_ws/file_backup/src/copy.i"
 	@echo "... home/lyc/cpp_ws/file_backup/src/copy.s"
+	@echo "... home/lyc/cpp_ws/file_backup/src/crypto.o"
+	@echo "... home/lyc/cpp_ws/file_backup/src/crypto.i"
+	@echo "... home/lyc/cpp_ws/file_backup/src/crypto.s"
 .PHONY : help
 
 

@@ -1,8 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/cpt.dir/copy_test.cpp.o"
-  "CMakeFiles/cpt.dir/copy_test.cpp.o.d"
+  "CMakeFiles/cpt.dir/crypto_test.cpp.o"
+  "CMakeFiles/cpt.dir/crypto_test.cpp.o.d"
   "CMakeFiles/cpt.dir/home/lyc/cpp_ws/file_backup/src/copy.cpp.o"
   "CMakeFiles/cpt.dir/home/lyc/cpp_ws/file_backup/src/copy.cpp.o.d"
+  "CMakeFiles/cpt.dir/home/lyc/cpp_ws/file_backup/src/crypto.cpp.o"
+  "CMakeFiles/cpt.dir/home/lyc/cpp_ws/file_backup/src/crypto.cpp.o.d"
   "cpt"
   "cpt.pdb"
 )

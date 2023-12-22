@@ -81,12 +81,12 @@ clean: CMakeFiles/cpt.dir/clean
 CMakeFiles/cpt.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpt.dir/build.make CMakeFiles/cpt.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpt.dir/build.make CMakeFiles/cpt.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lyc/cpp_ws/file_backup/test/build/CMakeFiles --progress-num=1,2,3 "Built target cpt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lyc/cpp_ws/file_backup/test/build/CMakeFiles --progress-num=1,2,3,4 "Built target cpt"
 .PHONY : CMakeFiles/cpt.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/cpt.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lyc/cpp_ws/file_backup/test/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lyc/cpp_ws/file_backup/test/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/cpt.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/lyc/cpp_ws/file_backup/test/build/CMakeFiles 0
 .PHONY : CMakeFiles/cpt.dir/rule
