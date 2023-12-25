@@ -8,3 +8,5 @@
    make
    cd 工作目录
    ./bp
+3. 推送命令：
+   git remote add origin git@github.com:The-Lyc/FileBackup.git

@@ -1,4 +1,15 @@
 #include "../include/copy.h"
+#include <fcntl.h>
+
+std::string rltv(std::string abs,std::string base) {
+    int base_len = base.size();
+    std::string tmp;
+    for( int i = base.size() ; i < abs.size() ; i++ ) {
+        tmp += abs[i];
+    }
+
+    return tmp;
+}
 
 bool copyMetadata_exclu_slink(const char* sourcePath, const char* destinationPath) {
     struct stat sourceInfo;
@@ -11,14 +22,49 @@ bool copyMetadata_exclu_slink(const char* sourcePath, const char* destinationPat
     mode_t permissions = sourceInfo.st_mode & (S_IRWXU | S_IRWXG | S_IRWXO);
 
     // 创建目标文件，保留源文件的权限
+    // if(S_ISFIFO(sourceInfo.st_mode)) {
+    //     if (mkfifo(destinationPath, permissions) == 0) {
+    //         std::cout << "FIFO created successfully." << std::endl;
+    //     } 
+    //     else {
+    //         perror("mkfifo");
+    //         std::cerr << "Error creating FIFO: " << strerror(errno) << std::endl;
+    //         return 1;
+    //     }
+    // }
     int destinationFd = open(destinationPath, O_WRONLY | O_CREAT | O_TRUNC, permissions);
     if (destinationFd == -1) {
         perror("open");
         return false;
     }
-
     // 关闭目标文件
     close(destinationFd);
+
+    //字符流处理
+    std::string sourceFilePath = sourcePath;
+    std::string destinationFilePath = destinationPath;
+    
+    std::ifstream sourceFile(sourceFilePath);
+    if (!sourceFile) {
+        std::cerr << "Error opening input file: " << sourceFilePath << std::endl;
+        return 1;
+    }
+
+    std::ofstream destinationFile(destinationFilePath);
+    if (!destinationFile) {
+        std::cerr << "Error opening output file: " << destinationFilePath << std::endl;
+        return 1;
+    }
+
+    // 从输入文件读取内容并写入输出文件
+    char ch;
+    while (sourceFile.get(ch)) {
+        destinationFile.put(ch);
+    }
+
+    // 关闭文件流
+    sourceFile.close();
+    destinationFile.close();
 
     // 设置目标文件的权限
     if (chmod(destinationPath, permissions) != 0) {
@@ -95,6 +141,10 @@ bool copyMetadata_slink(const char* sourcePath, const char* destinationPath) {
     times[1].tv_sec = sourceInfo.st_mtime;
     times[1].tv_usec = 0;
 
+    //TODO : 修改软链接的访问时间，使其与源文件一致
+
+    // std::cout<<"destinationPath:"<<destinationPath<<std::endl;
+
     if(utimes(destinationPath,times) != 0){
         perror("utimes");
         return 1;
@@ -123,8 +173,8 @@ void copy_directory(const fs::path& source, const fs::path& destination) {
         std::tm* localTime = std::localtime(&currentTime);
 
         // 使用 strftime 函数将本地时间格式化为字符串
-        char timeStr[800]; // 适当大小的字符数组来容纳格式化后的时间字符串
-        std::strftime(timeStr, sizeof(timeStr), "%Y-%m-%d %H:%M:%S", localTime);
+        char timeStr[1024]; // 适当大小的字符数组来容纳格式化后的时间字符串
+        std::strftime(timeStr, sizeof(timeStr), "%Y-%m-%d/%H:%M:%S", localTime);
 
         // 创建目标目录（唯一性：目录+创建时间）
         std::string ps(timeStr);
@@ -136,9 +186,12 @@ void copy_directory(const fs::path& source, const fs::path& destination) {
         // 遍历源目录
         for (const auto& entry : fs::recursive_directory_iterator(source)) {
             fs::path relative_path = fs::relative(entry.path(), source);
+
+            // std::cout<<"destination before:"<<destination<<std::endl;
+
             fs::path dest_path = destination / relative_path;
 
-            std::cout<<"dest_path::"<<dest_path<<std::endl;
+            // std::cout<<"destination after:"<<destination<<std::endl;
 
             // 如果是目录，创建目录
             if (fs::is_directory(entry.status())) {
@@ -159,26 +212,46 @@ void copy_directory(const fs::path& source, const fs::path& destination) {
                 int ret = lstat(filePath, &stat_buf);
 
                 if(S_ISLNK(stat_buf.st_mode )){
-                    std::cout<<entry.path()<<"is symlink"<<std::endl;
+                    // std::cout<<entry.path()<<"is symlink"<<std::endl;
+
+                    std::string rltv_path = rltv(entry.path(),source);
+                    relative_path = rltv_path;
+
+                    // std::cout<<"detination_path:"<<destination<<std::endl;
+
+                    std::string tmp = destination ;
+                    tmp += relative_path;
+
+                    // std::cout<<"detination_path:"<<destination<<std::endl;
+
+                    dest_path = tmp;
+                    
+                    // std::cout<<"entry_path:"<<entry.path()<<std::endl;
+                    // std::cout<<"source_path:"<<source<<std::endl;
+                    // std::cout<<"rltv_path:"<<rltv_path<<std::endl;
+                    // std::cout<<"symlink_dest_path:"<<dest_path<<std::endl;
+                    // std::cout<<"detination_path:"<<destination<<std::endl;
+                    // std::cout<<"relative_path:"<<relative_path<<std::endl;
+
                     if(copyMetadata_slink(entry.path().c_str(), dest_path.c_str()) == true){
                         std::cout<<entry.path()<<" has been copied to"<< dest_path.c_str() <<std::endl;
                     }
                     else{
-                        std::cout<<"&&"<<destination<<std::endl;
-                        std::cout<<"%%"<<dest_path.c_str()<<std::endl;
+                        // std::cout<<"&&"<<destination<<std::endl;
+                        // std::cout<<"%%"<<dest_path.c_str()<<std::endl;
                         std::cout<<entry.path()<<" copy failed "<<std::endl;
                     }
                     continue;
                 }
                 else{
-                    std::cout<<entry.path()<<"is not symlink"<<std::endl;
+                    // std::cout<<entry.path()<<"is not symlink"<<std::endl;
                     copyMetadata_exclu_slink(entry.path().c_str(), dest_path.c_str());
                     std::cout<<entry.path()<<" has been copied to"<<dest_path.c_str()<<std::endl;
                 }            
             }
         }
 
-        std::cout << "Backup completed successfully." << std::endl;
+        std::cout << "Backup completed." << std::endl;
     } catch (const std::exception& ex) {
         std::cerr << "Error: " << ex.what() << std::endl;
     }

@@ -15,6 +15,8 @@
 #include <cstring>
 #include <utime.h>
 #include <sys/time.h>
+#include <fstream>
+#include <ostream>
 
 namespace fs = std::filesystem;
 
