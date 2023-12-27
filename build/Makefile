@@ -129,6 +129,54 @@ bp/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bp.dir/build.make CMakeFiles/bp.dir/build
 .PHONY : bp/fast
 
+src/copy.o: src/copy.cpp.o
+.PHONY : src/copy.o
+
+# target to build an object file
+src/copy.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bp.dir/build.make CMakeFiles/bp.dir/src/copy.cpp.o
+.PHONY : src/copy.cpp.o
+
+src/copy.i: src/copy.cpp.i
+.PHONY : src/copy.i
+
+# target to preprocess a source file
+src/copy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bp.dir/build.make CMakeFiles/bp.dir/src/copy.cpp.i
+.PHONY : src/copy.cpp.i
+
+src/copy.s: src/copy.cpp.s
+.PHONY : src/copy.s
+
+# target to generate assembly for a file
+src/copy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bp.dir/build.make CMakeFiles/bp.dir/src/copy.cpp.s
+.PHONY : src/copy.cpp.s
+
+src/huffman.o: src/huffman.cpp.o
+.PHONY : src/huffman.o
+
+# target to build an object file
+src/huffman.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bp.dir/build.make CMakeFiles/bp.dir/src/huffman.cpp.o
+.PHONY : src/huffman.cpp.o
+
+src/huffman.i: src/huffman.cpp.i
+.PHONY : src/huffman.i
+
+# target to preprocess a source file
+src/huffman.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bp.dir/build.make CMakeFiles/bp.dir/src/huffman.cpp.i
+.PHONY : src/huffman.cpp.i
+
+src/huffman.s: src/huffman.cpp.s
+.PHONY : src/huffman.s
+
+# target to generate assembly for a file
+src/huffman.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bp.dir/build.make CMakeFiles/bp.dir/src/huffman.cpp.s
+.PHONY : src/huffman.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -186,6 +234,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... bp"
+	@echo "... src/copy.o"
+	@echo "... src/copy.i"
+	@echo "... src/copy.s"
+	@echo "... src/huffman.o"
+	@echo "... src/huffman.i"
+	@echo "... src/huffman.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

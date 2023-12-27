@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/bp.dir/src/main.cpp.o CMakeFiles/bp.dir/src/search.cpp.o -o ../bp 
+/usr/bin/c++ CMakeFiles/bp.dir/src/main.cpp.o CMakeFiles/bp.dir/src/search.cpp.o CMakeFiles/bp.dir/src/copy.cpp.o CMakeFiles/bp.dir/src/huffman.cpp.o -o ../bp  -lcryptopp 

@@ -81,12 +81,12 @@ clean: CMakeFiles/bp.dir/clean
 CMakeFiles/bp.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bp.dir/build.make CMakeFiles/bp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bp.dir/build.make CMakeFiles/bp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lyc/cpp_ws/file_backup/build/CMakeFiles --progress-num=1,2,3 "Built target bp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lyc/cpp_ws/file_backup/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target bp"
 .PHONY : CMakeFiles/bp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/bp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lyc/cpp_ws/file_backup/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lyc/cpp_ws/file_backup/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/bp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/lyc/cpp_ws/file_backup/build/CMakeFiles 0
 .PHONY : CMakeFiles/bp.dir/rule

@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
   "../bp"
   "../bp.pdb"
+  "CMakeFiles/bp.dir/src/copy.cpp.o"
+  "CMakeFiles/bp.dir/src/copy.cpp.o.d"
+  "CMakeFiles/bp.dir/src/huffman.cpp.o"
+  "CMakeFiles/bp.dir/src/huffman.cpp.o.d"
   "CMakeFiles/bp.dir/src/main.cpp.o"
   "CMakeFiles/bp.dir/src/main.cpp.o.d"
   "CMakeFiles/bp.dir/src/search.cpp.o"
