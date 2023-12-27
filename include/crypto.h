@@ -7,12 +7,12 @@
 #include <unistd.h>
 #include <iostream>
 #include <fstream>
-#include <cryptopp/aes.h>
-#include <cryptopp/modes.h>
-#include <cryptopp/files.h>
-#include <cryptopp/filters.h>
-#include <cryptopp/osrng.h>
-#include <cryptopp/pwdbased.h>
+#include "../cryptopp/aes.h"
+#include "../cryptopp/modes.h"
+#include "../cryptopp/files.h"
+#include "../cryptopp/filters.h"
+#include "../cryptopp/osrng.h"
+#include "../cryptopp/pwdbased.h"
 
 using namespace CryptoPP;
 

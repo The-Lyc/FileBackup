@@ -10,3 +10,9 @@
    ./bp
 3. 推送命令：
    git remote add origin git@github.com:The-Lyc/FileBackup.git
+
+4. cryptopp库 下载及编译安装：
+   git clone https://github.com/weidai11/cryptopp.git
+   cd cryptopp
+   make
+   sudo make install

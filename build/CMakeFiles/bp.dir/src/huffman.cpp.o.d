@@ -1,6 +1,6 @@
 CMakeFiles/bp.dir/src/huffman.cpp.o: \
- /home/lyc/cpp_ws/file_backup/src/huffman.cpp /usr/include/stdc-predef.h \
- /home/lyc/cpp_ws/file_backup/src/../include/huffman.h \
+ /home/lyc/cpp_ws/FileBackup/src/huffman.cpp /usr/include/stdc-predef.h \
+ /home/lyc/cpp_ws/FileBackup/src/../include/huffman.h \
  /usr/include/c++/11/algorithm /usr/include/c++/11/utility \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

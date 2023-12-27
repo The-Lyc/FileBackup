@@ -1,6 +1,6 @@
 CMakeFiles/bp.dir/src/copy.cpp.o: \
- /home/lyc/cpp_ws/file_backup/src/copy.cpp /usr/include/stdc-predef.h \
- /home/lyc/cpp_ws/file_backup/src/../include/copy.h \
+ /home/lyc/cpp_ws/FileBackup/src/copy.cpp /usr/include/stdc-predef.h \
+ /home/lyc/cpp_ws/FileBackup/src/../include/copy.h \
  /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -201,7 +201,7 @@ CMakeFiles/bp.dir/src/copy.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
  /usr/include/c++/11/bits/fstream.tcc \
- /home/lyc/cpp_ws/file_backup/src/../include/huffman.h \
+ /home/lyc/cpp_ws/FileBackup/src/../include/huffman.h \
  /usr/include/c++/11/algorithm /usr/include/c++/11/bits/stl_algo.h \
  /usr/include/c++/11/bits/algorithmfwd.h \
  /usr/include/c++/11/bits/stl_heap.h \
