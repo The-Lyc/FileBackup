@@ -6,10 +6,16 @@ set(CMAKE_CXX_STANDARD 17)
 
 set(SOURCES
     src/main.cpp 
-    src/search.cpp)
+    src/search.cpp
+    src/copy.cpp 
+    src/huffman.cpp
+    # src/crypto.cpp 
+    )
 
 add_executable(bp ${SOURCES})
 
 target_include_directories(bp PRIVATE include)
 
 set_target_properties(bp PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
+
+target_link_libraries(bp -lcryptopp)

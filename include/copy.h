@@ -20,8 +20,11 @@
 
 namespace fs = std::filesystem;
 
-void copy_directory(const fs::path& source, const fs::path& destination);
-bool copyMetadata_exclu_slink(const char* sourcePath, const char* destinationPath);
+#define SYM_ZIP 1
+#define SYM_REC 2
+
+void copy_directory(const fs::path& source, const fs::path& destination,int sym);
+bool copyMetadata_exclu_slink(const char* sourcePath, const char* destinationPath, int sym);
 bool copyMetadata_slink(const char* sourcePath, const char* destinationPath);
 
 #endif

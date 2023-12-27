@@ -1,4 +1,5 @@
 #include "../include/copy.h"
+#include "../include/huffman.h"
 #include <fcntl.h>
 
 std::string rltv(std::string abs,std::string base) {
@@ -11,7 +12,7 @@ std::string rltv(std::string abs,std::string base) {
     return tmp;
 }
 
-bool copyMetadata_exclu_slink(const char* sourcePath, const char* destinationPath) {
+bool copyMetadata_exclu_slink(const char* sourcePath, const char* destinationPath,int sym) {
     struct stat sourceInfo;
     if (stat(sourcePath, &sourceInfo) != 0) {
         perror("stat");
@@ -40,31 +41,44 @@ bool copyMetadata_exclu_slink(const char* sourcePath, const char* destinationPat
     // 关闭目标文件
     close(destinationFd);
 
-    //字符流处理
-    std::string sourceFilePath = sourcePath;
-    std::string destinationFilePath = destinationPath;
+    // //字符流处理
+    // std::string sourceFilePath = sourcePath;
+    // std::string destinationFilePath = destinationPath;
     
-    std::ifstream sourceFile(sourceFilePath);
-    if (!sourceFile) {
-        std::cerr << "Error opening input file: " << sourceFilePath << std::endl;
-        return 1;
+    // std::ifstream sourceFile(sourceFilePath);
+    // if (!sourceFile) {
+    //     std::cerr << "Error opening input file: " << sourceFilePath << std::endl;
+    //     return 1;
+    // }
+
+    // std::ofstream destinationFile(destinationFilePath);
+    // if (!destinationFile) {
+    //     std::cerr << "Error opening output file: " << destinationFilePath << std::endl;
+    //     return 1;
+    // }
+
+    // // 从输入文件读取内容并写入输出文件
+    // char ch;
+    // while (sourceFile.get(ch)) {
+    //     destinationFile.put(ch);
+    // }
+
+    // // 关闭文件流
+    // sourceFile.close();
+    // destinationFile.close();
+
+    //判断复制的类型
+    if(sym == SYM_ZIP) {
+        //复制并压缩文件至指定位置
+        zipToCode( sourcePath, destinationPath);
+    }
+    else if(sym == SYM_REC) {
+        //解压文件至指定位置
+        recoverFromCode(sourcePath,destinationPath);
     }
 
-    std::ofstream destinationFile(destinationFilePath);
-    if (!destinationFile) {
-        std::cerr << "Error opening output file: " << destinationFilePath << std::endl;
-        return 1;
-    }
+   
 
-    // 从输入文件读取内容并写入输出文件
-    char ch;
-    while (sourceFile.get(ch)) {
-        destinationFile.put(ch);
-    }
-
-    // 关闭文件流
-    sourceFile.close();
-    destinationFile.close();
 
     // 设置目标文件的权限
     if (chmod(destinationPath, permissions) != 0) {
@@ -161,7 +175,7 @@ bool copyMetadata_slink(const char* sourcePath, const char* destinationPath) {
     return true;
 }
 
-void copy_directory(const fs::path& source, const fs::path& destination) {
+void copy_directory(const fs::path& source, const fs::path& destination, int sym) {
     try {
         //获取时间
         std::chrono::system_clock::time_point now = std::chrono::system_clock::now();
@@ -245,7 +259,7 @@ void copy_directory(const fs::path& source, const fs::path& destination) {
                 }
                 else{
                     // std::cout<<entry.path()<<"is not symlink"<<std::endl;
-                    copyMetadata_exclu_slink(entry.path().c_str(), dest_path.c_str());
+                    copyMetadata_exclu_slink(entry.path().c_str(), dest_path.c_str(),sym);
                     std::cout<<entry.path()<<" has been copied to"<<dest_path.c_str()<<std::endl;
                 }            
             }
