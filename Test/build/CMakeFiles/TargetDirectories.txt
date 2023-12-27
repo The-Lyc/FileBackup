@@ -1,0 +1,3 @@
+/home/lyc/cpp_ws/file_backup/Test/build/CMakeFiles/cpt.dir
+/home/lyc/cpp_ws/file_backup/Test/build/CMakeFiles/edit_cache.dir
+/home/lyc/cpp_ws/file_backup/Test/build/CMakeFiles/rebuild_cache.dir
